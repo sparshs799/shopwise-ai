@@ -1,0 +1,22 @@
+{
+  "name": "shopwise-ai",
+  "version": "1.0.0",
+  "description": "AI-driven shopping aggregator - Your Intelligent Shopping Companion",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=server\" \"npm run dev --workspace=client\"",
+    "dev:client": "npm run dev --workspace=client",
+    "dev:server": "npm run dev --workspace=server",
+    "build": "npm run build --workspace=client",
+    "install:all": "npm install && npm install --workspace=client && npm install --workspace=server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "author": "Sparsh Srivastava",
+  "license": "MIT"
+}
